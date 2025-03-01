@@ -1618,10 +1618,7 @@ namespace X
 
 			// Create ICO image data
 			std::vector<uint8_t> icoData;
-			if (size == 256)
-				icoData = _icoCreatePNGData(imageResized.getData(), size, size);
-			else
-				icoData = _icoCreateBMPData(imageResized.getData(), size, size);
+			icoData = _icoCreatePNGData(imageResized.getData(), size, size);
 
 			// Add the ICO image data to vecIcoDataForImages
 			vecIcoDataForImages.push_back(std::move(icoData));
